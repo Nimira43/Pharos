@@ -1,16 +1,6 @@
-import './App.css'
-
-function App() {
-   return (
-    <>
-      <div>
-        <h1>NimiraTech</h1>
-        <img src="/icon.png" width="200" />
-      </div>
-      <div className="card">
-      </div>
-    </>
+const App = () => {
+  return (
+    <h1 className='text-7xl font-bold'>App</h1>  
   )
 }
-
-export default App
+export default App;
