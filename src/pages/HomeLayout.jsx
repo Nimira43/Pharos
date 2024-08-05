@@ -1,8 +1,13 @@
+import { Outlet } from "react-router-dom"
+
 const HomeLayout = () => {
   return (
-    <div>
-      <h1 className="text-4xl">HomeLayout</h1>
-    </div>
+    <>
+      <nav>
+        <span className="text-4xl">at home</span>
+      </nav>
+      <Outlet />
+    </>
   )
 }
 
