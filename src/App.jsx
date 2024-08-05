@@ -1,6 +1,7 @@
 const App = () => {
   return (
     <div>
+      <h2 className='logo'>at home</h2>      
       <h1>at home</h1>      
     </div>
   )
