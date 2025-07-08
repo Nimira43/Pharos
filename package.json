@@ -4,7 +4,8 @@
   "description": "Kanban system using VERN and Bootstrap",
   "main": "index.js",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "webpack-server": "webpack serve"
   },
   "author": "Nick Rabone",
   "license": "ISC",
