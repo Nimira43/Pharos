@@ -23,7 +23,7 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            preset: [
+            presets: [
               '@babel/preset-env',
             ],
           },
