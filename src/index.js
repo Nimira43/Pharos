@@ -2,4 +2,8 @@ import './styles/stylekanban.css'
 
 const testH1 = document.getElementById('test-h1')
 
-testH1.innerHTML = 'Pharos'
+const insertTitle = () => {
+  return 'Pharos'
+}
+
+testH1.innerHTML = insertTitle
