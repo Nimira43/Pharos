@@ -15,10 +15,15 @@
   --grey-medium: #999;
   --grey-light: #ccc;
   --grey-light-extra: #eee;
+  --transition: all 0.5s ease-in;
 }
 
 .logo {
-  font-family: 'Amatic SC', sans-serif !important;
+  font-family: 'Amatic SC', sans-serif;
+}
+
+a {
+  transition: var(--transition);
 }
 
 .bg-main {
