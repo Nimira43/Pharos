@@ -22,14 +22,56 @@
 }
 
 .bg-main {
-  background-color: #ff4500;
+  background-color: var(--main);
 }
 .text-main {
-  color: #ff4500;
+  color: var(--main);
 }
 .bg-support {
-  background-color: #008080;
+  background-color: var(--support);
 }
 .text-support {
-  color: #008080;
+  color: var(--support);
+}
+.bg-gold {
+  background-color: var(--gold);
+}
+.text-gold {
+  color: var(--gold);
+}
+.bg-dark {
+  background-color: var(--dark);
+}
+.text-dark {
+  color: var(--dark);
+}
+.bg-light {
+  background-color: var(--light);
+}
+.text-light {
+  color: var(--light);
+}
+.bg-grey-dark {
+  background-color: var(--grey-dark);
+}
+.text-grey-dark {
+  color: var(--grey-dark);
+}
+.bg-grey-medium {
+  background-color: var(--grey-medium);
+}
+.text-grey-medium {
+  color: var(--grey-medium);
+}
+.bg-grey-light {
+  background-color: var(--grey-light);
+}
+.text-grey-light {
+  color: var(--grey-light);
+}
+.bg-grey-light-extra {
+  background-color: var(--grey-extra);
+}
+.text-grey-light-extra {
+  color: var(--grey-light-extra);
 }
