@@ -6,4 +6,4 @@ const insertTitle = () => {
   return 'Pharos'
 }
 
-testH1.innerHTML = insertTitle
+testH1.innerHTML = insertTitle()
