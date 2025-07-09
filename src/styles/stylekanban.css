@@ -81,6 +81,11 @@ a {
   color: var(--grey-light-extra);
 }
 
+.navbar-text {
+  color: var(--light);
+  font-size: 30px;
+}
+
 #username-nav-item,
 #logout-nav-item {
   padding-top: 11px;
