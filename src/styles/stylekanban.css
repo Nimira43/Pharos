@@ -80,3 +80,25 @@ a {
 .text-grey-light-extra {
   color: var(--grey-light-extra);
 }
+
+#username-nav-item,
+#logout-nav-item {
+  padding-top: 11px;
+}
+
+#logout-nav-item {
+  padding-left: 20px;
+}
+
+#dashboard-nav-link,
+#register-nav-link,
+#login-nav-link {
+  padding-top: 20px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
