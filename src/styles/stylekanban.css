@@ -101,9 +101,61 @@ a {
   padding-top: 20px;
 }
 
+.todo {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: var(--light);
+  font-size: 30px;
+}
+
+.inprogress {
+  background-color: rgba(0, 0, 255, 0.1);
+  color: var(--light);
+  font-size: 30px;
+}
+
+.done {
+  background-color: rgba(0, 128, 0, 0.1);
+  color: var(--light);
+  font-size: 30px;
+}
+
+.createbutton {
+  margin-top: 20px;
+}
+
+.project-task {
+  margin-top: 8px;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+.drag-container {
+  margin: 20px;
+}
+
+.drag-list {
+  display: flex;
+  align-items: flex-start;
+}
+
+.drag-column {
+  flex: 1;
+  margin: 0 10px;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow-x: hidden;
+}
+
+.drag-item-list {
+  min-height: 400px;
+}
+
+.over {
+  padding: 50px 10px;
 }
 
