@@ -10,3 +10,5 @@ export const router = async () => {
   console.log('path', path)
   console.log('route', route)
 }
+
+router()
