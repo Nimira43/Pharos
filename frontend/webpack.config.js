@@ -9,6 +9,9 @@ module.exports = {
     filename: 'index.js',
   },
   plugins: [
-    new HtmlWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      title: 'Pharos',
+      template: './src/index.html',
+    }),
   ],
 }
