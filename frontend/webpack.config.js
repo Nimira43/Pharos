@@ -46,5 +46,13 @@ module.exports = {
       template: './src/index.html',
     }),
     new MiniCssExtractPlugin(),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: 'src/pages',
+          to: 'pages'
+        },
+      ],
+    })
   ],
 }
