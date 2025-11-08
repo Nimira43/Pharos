@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sixtyfour&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+
+:root {
+  --main: #ff4500;
+  --support: #008080;
+  --gold: #ffd700;
+  --dark: #111;
+  --light: #fffcfa;
+  --grey-dark: #333;
+  --grey-medium: #999;
+  --grey-light: #ccc;
+  --grey-light-extra: #eee;
+  --transition: all 0.5s ease-in;
+}
+
+.logo {
+  font-family: 'Sixtyfour', sans-serif;
+}
+
+a {
+  transition: var(--transition);
+}
+
+.bg-main {
+  background-color: var(--main);
+}
+.text-main {
+  color: var(--main);
+}
+.bg-support {
+  background-color: var(--support);
+}
+.text-support {
+  color: var(--support);
+}
+.bg-gold {
+  background-color: var(--gold);
+}
+.text-gold {
+  color: var(--gold);
+}
+.bg-dark {
+  background-color: var(--dark);
+}
+.text-dark {
+  color: var(--dark);
+}
+.bg-light {
+  background-color: var(--light);
+}
+.text-light {
+  color: var(--light);
+}
+.bg-grey-dark {
+  background-color: var(--grey-dark);
+}
+.text-grey-dark {
+  color: var(--grey-dark);
+}
+.bg-grey-medium {
+  background-color: var(--grey-medium);
+}
+.text-grey-medium {
+  color: var(--grey-medium);
+}
+.bg-grey-light {
+  background-color: var(--grey-light);
+}
+.text-grey-light {
+  color: var(--grey-light);
+}
+.bg-grey-light-extra {
+  background-color: var(--grey-extra);
+}
+.text-grey-light-extra {
+  color: var(--grey-light-extra);
+}
+
+.navbar-text {
+  color: var(--light);
+  font-size: 30px;
+}
+
+#username-nav-item,
+#logout-nav-item {
+  padding-top: 11px;
+}
+
+#logout-nav-item {
+  padding-left: 20px;
+}
+
+#dashboard-nav-link,
+#register-nav-link,
+#login-nav-link {
+  padding-top: 20px;
+}
+
+.todo {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: var(--light);
+  font-size: 30px;
+}
+
+.inprogress {
+  background-color: rgba(0, 0, 255, 0.1);
+  color: var(--light);
+  font-size: 30px;
+}
+
+.done {
+  background-color: rgba(0, 128, 0, 0.1);
+  color: var(--light);
+  font-size: 30px;
+}
+
+.createbutton {
+  margin-top: 20px;
+}
+
+.project-task {
+  margin-top: 8px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.drag-container {
+  margin: 20px;
+}
+
+.drag-list {
+  display: flex;
+  align-items: flex-start;
+}
+
+.drag-column {
+  flex: 1;
+  margin: 0 10px;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow-x: hidden;
+}
+
+.drag-item-list {
+  min-height: 400px;
+}
+
+.over {
+  padding: 50px 10px;
+}
+
