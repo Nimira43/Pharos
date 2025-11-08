@@ -95,12 +95,6 @@ a {
   padding-left: 20px;
 }
 
-#dashboard-nav-link,
-#register-nav-link,
-#login-nav-link {
-  padding-top: 20px;
-}
-
 .todo {
   background-color: rgba(0, 0, 0, 0.1);
   color: var(--light);

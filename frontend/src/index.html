@@ -11,11 +11,38 @@
   <title>Pharos</title>
 </head>
 <body>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-4">
+    <div class="container">
+      <a href="/" class="navbar-brand text-light logo" data-link>Pharos</a>
+      <div class="collapse navbar-collapse" id="mobile-nav">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item">
+            <a href="/dashboard" class="nav-link text-light" data-link id="dashboard-nav-link">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a href="/register" class="nav-link text-light" data-link id="register-nav-link">Register</a>
+          </li>
+          <li class="nav-item">
+            <a href="/login" class="nav-link text-light" data-link id="login-nav-link">Login</a>
+          </li>
+          <li class="nav-item dropdown" id="login-nav-item">
+            <a href="#" class="nav-link dropdown-toggle text-light" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-regular fa-user"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#" class="dropdown-item" id="logout">Logout</a></li>
+            </ul>
+          </li>
+          <li class="nav-item" id="username-nav-item">
+            <span class="nav-link text-light" id="username">Username</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-  <h1 id="test"></h1>
+  <div id="app"></div>
 
-
-  <script src="index.js"></script>
   <script 
     src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" 
