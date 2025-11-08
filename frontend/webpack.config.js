@@ -22,5 +22,7 @@ module.exports = {
       title: 'Pharos',
       template: './src/index.html',
     }),
+    new MiniCssExtractPlugin(),
+
   ],
 }
