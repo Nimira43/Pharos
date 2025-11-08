@@ -44,16 +44,16 @@ a {
 .text-gold {
   color: var(--gold);
 }
-.bg-dark {
+.bg-dark-col {
   background-color: var(--dark);
 }
-.text-dark {
+.text-dark-col {
   color: var(--dark);
 }
-.bg-light {
+.bg-light-col {
   background-color: var(--light);
 }
-.text-light {
+.text-light-col {
   color: var(--light);
 }
 .bg-grey-dark {
