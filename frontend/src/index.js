@@ -6,9 +6,7 @@ export const router = async () => {
   const path = location.pathname || '/'
   const route = routes[path]
 
-  console.log('app', app)
-  console.log('path', path)
-  console.log('route', route)
+ 
 }
 
 router()
