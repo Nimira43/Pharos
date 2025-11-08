@@ -6,7 +6,11 @@ export const router = async () => {
   const path = location.pathname || '/'
   const route = routes[path]
 
- 
+  try {
+    const res = await fetch(route.path)
+  } catch (error) {
+    
+  }
 }
 
 router()
