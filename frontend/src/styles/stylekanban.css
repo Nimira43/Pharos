@@ -9,6 +9,7 @@
   --main: #ff4500;
   --support: #008080;
   --gold: #ffd700;
+  --black: #000;
   --dark: #111;
   --light: #fffcfa;
   --grey-dark: #333;
@@ -47,6 +48,7 @@ a {
 .bg-dark-col {
   background-color: var(--dark);
 }
+
 .text-dark-col {
   color: var(--dark);
 }
@@ -75,11 +77,25 @@ a {
   color: var(--grey-light);
 }
 .bg-grey-light-extra {
-  background-color: var(--grey-extra);
+  background-color: var(--grey-light-extra);
 }
 .text-grey-light-extra {
   color: var(--grey-light-extra);
 }
+
+.main-btn {
+  border: 1px solid var(--dark);
+  background-color: transparent;
+  color: var(--dark);
+  text-transform: uppercase;
+  transition: var(--transition);
+}
+
+.main-btn:hover {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
 
 .navbar-text {
   color: var(--light);
