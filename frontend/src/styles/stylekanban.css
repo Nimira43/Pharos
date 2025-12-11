@@ -48,7 +48,6 @@ a {
 .bg-dark-col {
   background-color: var(--dark);
 }
-
 .text-dark-col {
   color: var(--dark);
 }
@@ -96,10 +95,13 @@ a {
   color: var(--light);
 }
 
+#username {
+  cursor: pointer;
+}
+
 #username-nav-item,
 #logout-nav-item {
-  padding-top: 0;
-  padding-left: 0;
+  padding: 0;
 }
 
 .navbar-nav .nav-item {
@@ -107,36 +109,26 @@ a {
   align-items: center;
 }
 
-.navbar .nav-link {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+.navbar .nav-link,
+#username {
   display: flex;
   align-items: center;
+  padding: 0.5rem 1rem;
+  line-height: 1.2;
+}
+
+.navbar .nav-link i {
+  line-height: 1;
+  transform: translateY(1px);
+}
+
+.navbar .dropdown-toggle::after {
+  vertical-align: 0;
 }
 
 .navbar .dropdown-toggle {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-}
-
-.nav-link {
-  display: flex;
-  align-items: center;
-  line-height: 1.2;
-}
-
-.nav-link i {
-  line-height: 1;
-  margin-top: 1px;
-}
-
-#username {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  line-height: 1.2;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
 }
 
 .navbar-text {
