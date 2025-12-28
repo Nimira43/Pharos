@@ -30,7 +30,9 @@ class Register {
       Swal.fire({
         icon: 'error',
         title: 'Oh no...',
-        text: 'All fields are required.'
+        text: 'All fields are required.',
+        confirmButtonText: 'OK',
+        customClass: { confirmButton: 'main-btn' }
       })
       return
     }
