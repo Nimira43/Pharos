@@ -27,7 +27,11 @@ class Register {
       !payload.password ||
       !payload.confirmPassword
     ) {
-      alert('All fields are required.')
+      Swal.fire({
+        icon: 'error',
+        title: 'Oh no...',
+        text: 'All fields are required.'
+      })
       return
     }
   }
