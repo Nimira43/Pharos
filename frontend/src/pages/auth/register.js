@@ -10,7 +10,7 @@ class Register {
 
   async onSubmitRegisterForm(e) {
     e.preventDefault()
-    console.log('Receiving submit event from the Registration Form.')
+    console.log(e.target)
   }
 
   render() {
