@@ -11,6 +11,9 @@ export const router = async () => {
     const res = await fetch(route.path)
     const html = await res.text()
     app.innerHTML = html
+
+    bootstrap(path)
+
   } catch (error) {
     console.log(error)
     app.innerHTML = '<h1>404 Page Not Found</h1>'    
