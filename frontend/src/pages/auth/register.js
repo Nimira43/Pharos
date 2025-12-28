@@ -4,7 +4,12 @@ class Register {
     this.render()
   }
 
+  addSubmitEventListener() {
+    this.registrationForm.addEventListener('submit', this.onSubmitRegisterForm.bind(this))
+  }
+
   
+
   render() {}
 
 }
