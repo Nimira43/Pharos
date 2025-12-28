@@ -1,5 +1,6 @@
 import './styles/stylekanban.css'
 import routes from './routes'
+import bootstrap from './bootstrap'
 
 export const router = async () => {
   const app = document.getElementById('app')
