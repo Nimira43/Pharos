@@ -13,8 +13,9 @@ class Register {
     console.log('Receiving submit event from the Registration Form.')
   }
 
-  render() {}
-
+  render() {
+    this.addSubmitEventListener()
+  }
 }
 
 export default Register
