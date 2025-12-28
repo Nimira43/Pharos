@@ -19,7 +19,14 @@ class Register {
       confirmPassword: form.querySelector("[name='confirmPassword']").value
     }
 
-    console.log(payload)
+    if (
+      !payload.name ||
+      !payload.email ||
+      !payload.password ||
+      !payload.confirmPassword
+    ) {
+      alert('All fields are required.')
+    }
   }
 
   render() {
