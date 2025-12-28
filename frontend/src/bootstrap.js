@@ -10,6 +10,7 @@ const bootstrap = async (path) => {
         module = await import('./pages/auth/login.js')
         break
       default:
+        console.log(`No module found for ${path}`)
         break
     }
 
