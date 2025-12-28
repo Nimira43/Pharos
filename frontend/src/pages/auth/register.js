@@ -8,7 +8,10 @@ class Register {
     this.registrationForm.addEventListener('submit', this.onSubmitRegisterForm.bind(this))
   }
 
-  
+  async onSubmitRegisterForm(e) {
+    e.preventDefault()
+    console.log('Receiving submit event from the Registration Form.')
+  }
 
   render() {}
 
