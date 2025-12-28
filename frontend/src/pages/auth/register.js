@@ -1,3 +1,5 @@
+import Swal from 'sweetalert2'
+
 class Register {
   constructor() {
     this.registrationForm = document.getElementById('registration-form')
