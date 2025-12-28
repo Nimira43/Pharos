@@ -52,6 +52,10 @@ module.exports = {
           from: 'src/pages',
           to: 'pages'
         },
+        {
+          from: 'src/images',
+          to: 'images'
+        },
       ],
     })
   ],
