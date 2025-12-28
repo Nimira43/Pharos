@@ -13,9 +13,9 @@ class Register {
     const form = e.target
 
     const payload = {
-      name: form.querySelector("[name='name']").value
-      email: form.querySelector("[name='email']").value
-      password: form.querySelector("[name='password']").value
+      name: form.querySelector("[name='name']").value,
+      email: form.querySelector("[name='email']").value,
+      password: form.querySelector("[name='password']").value,
       confirmPassword: form.querySelector("[name='confirmPassword']").value
     }
   }
