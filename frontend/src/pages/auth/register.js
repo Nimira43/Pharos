@@ -18,6 +18,8 @@ class Register {
       password: form.querySelector("[name='password']").value,
       confirmPassword: form.querySelector("[name='confirmPassword']").value
     }
+
+    console.log(payload)
   }
 
   render() {
