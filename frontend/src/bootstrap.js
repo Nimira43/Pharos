@@ -6,7 +6,9 @@ const bootstrap = async (path) => {
       case '/register':
         module = await import('./pages/auth/register.js')
         break
-    
+      case '/login':
+        module = await import('./pages/auth/login.js')
+        break
       default:
         break
     }
