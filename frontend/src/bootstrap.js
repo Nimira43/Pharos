@@ -16,6 +16,11 @@ const bootstrap = async (path) => {
 
     if (module) {
       const Class = module.default || module
+
+      if (typeof Class === 'function') {
+        console.log('New class instantiated.')
+        new Class()
+      }
     }
 
   } catch (error) {
