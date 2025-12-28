@@ -3,8 +3,8 @@ const bootstrap = async (path) => {
     let module
 
     switch (path) {
-      case value:
-        
+      case '/register':
+        module = await import('./pages/auth/register.js')
         break
     
       default:
