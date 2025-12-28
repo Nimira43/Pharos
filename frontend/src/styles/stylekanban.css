@@ -84,6 +84,7 @@ a {
 
 .main-btn {
   border: 1px solid var(--dark);
+  border-radius: 3px;
   background-color: transparent;
   color: var(--dark);
   text-transform: uppercase;
