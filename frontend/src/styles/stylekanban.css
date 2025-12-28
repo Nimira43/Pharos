@@ -11,11 +11,11 @@
   --gold: #ffd700;
   --black: #000;
   --dark: #111;
-  --light: #fffcfa;
-  --grey-dark: #333;
-  --grey-medium: #999;
-  --grey-light: #ccc;
-  --grey-light-extra: #eee;
+  --light: #fffdfa;
+  --grey-1: #333;
+  --grey-2: #999;
+  --grey-3: #ccc;
+  --grey-4: #eee;
   --transition: all 0.5s ease-in;
 }
 
@@ -57,33 +57,33 @@ a {
 .text-light-col {
   color: var(--light);
 }
-.bg-grey-dark {
-  background-color: var(--grey-dark);
+.bg-grey-1 {
+  background-color: var(--grey-1);
 }
-.text-grey-dark {
-  color: var(--grey-dark);
+.text-grey-1 {
+  color: var(--grey-1);
 }
-.bg-grey-medium {
-  background-color: var(--grey-medium);
+.bg-grey-2 {
+  background-color: var(--grey-2);
 }
-.text-grey-medium {
-  color: var(--grey-medium);
+.text-grey-2 {
+  color: var(--grey-2);
 }
-.bg-grey-light {
-  background-color: var(--grey-light);
+.bg-grey-3 {
+  background-color: var(--grey-3);
 }
-.text-grey-light {
-  color: var(--grey-light);
+.text-grey-3 {
+  color: var(--grey-3);
 }
-.bg-grey-light-extra {
-  background-color: var(--grey-light-extra);
+.bg-grey-4 {
+  background-color: var(--grey-4);
 }
-.text-grey-light-extra {
-  color: var(--grey-light-extra);
+.text-grey-4 {
+  color: var(--grey-4);
 }
 
 .main-btn {
-  border: 1px solid var(--dark);
+  border: 1px solid var(--dark) !important;
   border-radius: 3px;
   background-color: transparent;
   color: var(--dark);
@@ -139,6 +139,17 @@ a {
 
 #logout-nav-item {
   padding-left: 20px;
+}
+
+input {
+  border: 1px solid var(--grey-3) !important;
+  border-radius: 3px !important;
+  transition: var(--transition) !important;
+}
+
+input:focus {
+  border: 1px solid var(--dark) !important;
+  box-shadow: none !important; 
 }
 
 .todo {
