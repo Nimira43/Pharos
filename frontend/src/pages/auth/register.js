@@ -10,7 +10,7 @@ class Register {
 
   async onSubmitRegisterForm(e) {
     e.preventDefault()
-    console.log(e.target)
+    const form = e.target
   }
 
   render() {
