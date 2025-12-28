@@ -11,6 +11,13 @@ class Register {
   async onSubmitRegisterForm(e) {
     e.preventDefault()
     const form = e.target
+
+    const payload = {
+      name: form.querySelector("[name='name']").value
+      email: form.querySelector("[name='email']").value
+      password: form.querySelector("[name='password']").value
+      confirmPassword: form.querySelector("[name='confirmPassword']").value
+    }
   }
 
   render() {
