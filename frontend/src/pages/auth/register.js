@@ -26,6 +26,7 @@ class Register {
       !payload.confirmPassword
     ) {
       alert('All fields are required.')
+      return
     }
   }
 
