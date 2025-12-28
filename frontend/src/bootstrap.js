@@ -15,7 +15,7 @@ const bootstrap = async (path) => {
     }
 
     if (module) {
-      console.log('module', module)
+      const Class = module.default || module
     }
 
   } catch (error) {
