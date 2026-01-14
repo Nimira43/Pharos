@@ -1,4 +1,5 @@
 import Swal from 'sweetalert2'
+import { navigateTo } from '../../utils/helpers'
 
 class Register {
   constructor() {
@@ -65,6 +66,8 @@ class Register {
         confirmButtonText: 'OK',
         customClass: { confirmButton: 'main-btn' }
       })
+
+      navigateTo('/login')
     } catch (error) {
       
     }
