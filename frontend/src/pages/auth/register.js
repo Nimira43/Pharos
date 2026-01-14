@@ -29,13 +29,49 @@ class Register {
     ) {
       Swal.fire({
         icon: 'error',
-        title: 'Oh no...',
+        title: 'Error...',
         text: 'All fields are required.',
         confirmButtonText: 'OK',
         customClass: { confirmButton: 'main-btn' }
       })
       return
     }
+
+    if (payload.password !== payload.confirmPassword) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error...',
+        text: 'The passwords do not match.',
+        confirmButtonText: 'OK',
+        customClass: { confirmButton: 'main-btn' }
+      })
+      return
+    }
+
+    try {
+      console.log('Validation passed. Payload ready', payload)
+
+      this.clearFieldsAfterSubmit([
+        form.querySelector("[name='name']"),
+        form.querySelector("[name='email']"),
+        form.querySelector("[name='password']"),
+        form.querySelector("[name='confirmPassword']")    
+      ])
+
+      Swal.fire({
+        icon: 'success',
+        title: 'Successful Registration',
+        text: 'You are now able to login.',
+        confirmButtonText: 'OK',
+        customClass: { confirmButton: 'main-btn' }
+      })
+    } catch (error) {
+      
+    }
+  }
+
+  clearFieldsAfterSubmit(element) {
+    element.forEach((item) => (item.value = ''))
   }
 
   render() {
