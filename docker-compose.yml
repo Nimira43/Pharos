@@ -9,8 +9,10 @@ services:
       - "6444:27017"
     environment:
       MONGO_INITDB_DATABASE: pharos
+      MONGO_INITDB_ROOT_USERNAME: pharos
+      MONGO_INITDB_ROOT_PASSWORD: pharos_password
     volumes:
-      - pharos:/data/db
+      - pharos_data:/data/db
 
 volumes:
-  pharos:
+  pharos_data:
