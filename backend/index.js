@@ -4,7 +4,6 @@ import connectDB from './configuration/database.js'
 const app = express()
 const port = 8000
 
-// Connect to MongoDB
 connectDB()
 
 app.get('/test-route', (req, res) => {
