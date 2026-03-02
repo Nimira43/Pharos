@@ -1,8 +1,5 @@
-export const createUser = async (req, res) => {
-  console.log('Body of the request handled in the Controller', req.body)
+import * as UserService from '../services/user-service.js'
 
-  return res.json({
-    message: 'Temporary response from Controller',
-    data: req.body,
-  })
+export const createUser = async (req, res) => {
+  return UserService.createUser(req, res)  
 }
