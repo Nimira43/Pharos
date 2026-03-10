@@ -9,7 +9,10 @@ class UserRepository {
     })
 
     return await user.save()
-    
+  }
+
+  async getSingleUser(query) {
+    return await User.findOne(query).lean(true)
   }
 }
 

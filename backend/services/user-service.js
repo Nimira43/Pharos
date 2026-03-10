@@ -7,6 +7,10 @@ export const createUser = async (req, res) => {
   const salt = await bcrypt.genSalt(10)
   password = await bcrypt.hash(password, salt)
 
+  if (await UserRepository.getSingleUser({email})) {
+    return res.status(400).json('An account with this email already exists.')
+  }
+
   try {
     const newUser = (await UserRepository.createUser({
       ...req.body,
