@@ -1,5 +1,6 @@
 import Swal from 'sweetalert2'
-import { navigateTo } from '../../utils/helpers'
+import { navigateTo } from '../../utils/helpers.js'
+import AuthenticationApi from '../../services/AuthenticationApi.js'
 
 class Register {
   constructor() {
@@ -50,7 +51,7 @@ class Register {
     }
 
     try {
-      console.log('Validation passed. Payload ready', payload)
+      await AuthenticationApi.register(payload)
 
       this.clearFieldsAfterSubmit([
         form.querySelector("[name='name']"),
@@ -69,7 +70,13 @@ class Register {
 
       navigateTo('/login')
     } catch (error) {
-      
+      Swal.fire({
+        icon: 'error',
+        title: 'Registration Failed',
+        text: error.response?.data || 'Something went wrong.',
+        confirmButtonText: 'OK',
+        customClass: { confirmButton: 'main-btn' }
+      })
     }
   }
 

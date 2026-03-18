@@ -1,7 +1,7 @@
 import './styles/stylekanban.css'
-import routes from './routes'
-import bootstrap from './bootstrap'
-import { controlNavigation } from './utils/helpers'
+import routes from './routes.js'
+import bootstrap from './bootstrap.js'
+import { controlNavigation } from './utils/helpers.js'
 
 export const router = async () => {
   const app = document.getElementById('app')

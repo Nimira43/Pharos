@@ -1,6 +1,7 @@
 import express from 'express'
 import connectDB from './configuration/database.js'
 import userRoutes from './routes/user-routes.js'
+import cors from 'cors'
 
 connectDB()
 
@@ -9,6 +10,7 @@ const port = 8000
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
+app.use(cors())
 
 app.listen(port, () => {
   console.log(`Welcome to Pharos. Server listening on Port ${port}.`)
