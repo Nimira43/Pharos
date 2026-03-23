@@ -33,3 +33,21 @@ export const createUser = async (req, res, next) => {
 
   return next()
 }
+
+export const login = async (req, res, next) => {
+  const schema = joi.object({
+    email: joi.string().email().required(),
+    password: joi.string().required(),
+  })
+
+  const validation = schema.validate(req.body)
+
+  if (validation.error) {
+    const error = validation.error.message
+      ? validation.error.message
+      : validation.error.details[0].message
+    return res.status(400).json(error)
+  }
+
+  return next()
+}
