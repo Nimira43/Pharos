@@ -26,3 +26,19 @@ export const createUser = async (req, res) => {
     return res.status(400).json(error)
   }
 }
+
+export const login = async (req, res) => {
+  const { email, password } = req.body
+
+  try {
+    const user = await UserRepository.getSingleUser({ email })
+
+    if (!user) {
+      return res.status(401).json('Invalid credentials.')
+    }
+    return res.status(200).json('User exists in database.')
+
+  } catch (error) {
+    console.log(error)
+  }
+}

@@ -7,3 +7,4 @@ export const createUser = async (req, res) => {
 export const login = async (req, res) => {
   return UserService.login(req, res)  
 }
+
