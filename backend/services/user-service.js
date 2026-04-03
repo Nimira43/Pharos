@@ -36,7 +36,14 @@ export const login = async (req, res) => {
     if (!user) {
       return res.status(401).json('Invalid credentials.')
     }
-    return res.status(200).json('User exists in database.')
+
+    const checkPassword = bcrypt.compareSync(password, user.password)
+
+    if (!checkPassword) {
+      return res.status(401).json('Invalid credentials.')
+    }
+
+    return res.status(200).json('User credentials exist in database.')
 
   } catch (error) {
     console.log(error)
