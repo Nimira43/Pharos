@@ -1,5 +1,6 @@
 import UserRepository from '../repository/user-repository.js'
 import bcrypt from 'bcrypt'
+import JwtHelper from '../utils/jwt-helpers.js'
 
 export const createUser = async (req, res) => {
   let { name, email, password, confirmPassword } = req.body
@@ -43,7 +44,12 @@ export const login = async (req, res) => {
       return res.status(401).json('Invalid credentials.')
     }
 
-    return res.status(200).json('User credentials exist in database.')
+    const jwtToken = await JwtHelper.generateToken({
+      _id: user._id,
+      email: user.email,
+    })
+
+    return res.status(200).json({ token_generated: jwtToken })
 
   } catch (error) {
     console.log(error)
