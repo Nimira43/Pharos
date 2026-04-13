@@ -49,9 +49,25 @@ export const login = async (req, res) => {
       email: user.email,
     })
 
-    return res.status(200).json({ token_generated: jwtToken })
+    const expirationDate = new Date()
+    expirationDate.setDate(expirationDate.getDate() + 7000)
+
+    res.cookie('access-token', jwtToken, {
+      httpOnly: true,
+      secure: true,
+      expires: expirationDate,
+      sameSite: 'None',
+    })
+
+    const response = {
+      success: true,
+      message: 'Login successful',
+      data: user
+    }
+
+    return res.status(200).json(response)
 
   } catch (error) {
-    console.log(error)
+    return res.status(500).json('Something went wrong.')
   }
 }
