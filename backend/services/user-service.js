@@ -49,6 +49,8 @@ export const login = async (req, res) => {
       email: user.email,
     })
 
+    delete user.password
+
     const expirationDate = new Date()
     expirationDate.setDate(expirationDate.getDate() + 7000)
 

@@ -1,7 +1,10 @@
 import jwt from 'jsonwebtoken'
+import config from '../configuration/env.config.js'
 
 class JwtHelper {
   static async generateToken(data) {
+    const appConfig = config
+    
     return new Promise((resolve, _reject) => {
       const signOptions = {
         issuer: 'pharos',
@@ -12,7 +15,7 @@ class JwtHelper {
 
       signOptions.expiresIn = '2h'
 
-      jwt.sign(data, process.env.JWT_SECRET, signOptions, (err, token) => {
+      jwt.sign(data, `${appConfig.server_token_secret}`, signOptions, (err, token) => {
         if (err) {
           logger.error(err.message)
         }
