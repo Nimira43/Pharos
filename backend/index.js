@@ -4,11 +4,12 @@ import userRoutes from './routes/user-routes.js'
 import cors from 'cors'
 import taskRoutes from './routes/task-routes.js'
 import cookieParser from 'cookie-parser'
+import config from './configuration/env.config.js'
 
 connectDB()
 
 const app = express()
-const port = 8000
+const port = config.port
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
