@@ -3,12 +3,12 @@ const bootstrap = async (path) => {
     let module
 
     switch (path) {
+      case '/login':
+        module = await import('./pages/auth/login.js')
+        break
       case '/register':
         module = await import('./pages/auth/register.js')
         break
-      // case '/login':
-      //   module = await import('./pages/auth/login.js')
-      //   break
       default:
         console.log(`No module found for ${path}`)
         break
