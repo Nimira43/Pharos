@@ -1,4 +1,5 @@
 import Swal from 'sweetalert2'
+import AuthenticationApi from '../../services/AuthenticationApi.js'
 
 class Login {
   constructor() {
@@ -20,7 +21,7 @@ class Login {
 
     const payload = {
       email: form.querySelector("[name = 'email']").value,
-      password: form.querySelector("[name = 'password']")
+      password: form.querySelector("[name = 'password']").value,
     }
 
     if (!payload.email || !payload.password) {
@@ -34,7 +35,7 @@ class Login {
     }
 
     try {
-      console.log('Payload for Backend:', payload)
+      const res = await AuthenticationApi.login(payload)
       
       Swal.fire({
         title: 'Login successful',
@@ -42,6 +43,7 @@ class Login {
         icon: 'success',
         customClass: { confirmButton: 'main-btn' }
       })
+      console.log(res)
     } catch (error) {
       Swal.fire({
         icon: 'error',
