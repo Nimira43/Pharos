@@ -43,7 +43,14 @@ class Login {
         icon: 'success',
         customClass: { confirmButton: 'main-btn' }
       })
-      console.log(res)
+
+      console.log(res.data.data)
+
+      this.clearFieldsAfterSubmit([
+        form.querySelector("[name = 'email']"),
+        form.querySelector("[name = 'password']")
+      ])
+
     } catch (error) {
       Swal.fire({
         icon: 'error',
@@ -52,6 +59,10 @@ class Login {
         customClass: { confirmButton: 'main-btn' }
       })
     }
+  }
+
+  clearFieldsAfterSubmit(element) {
+    element.forEach((item) => (item.value = ''))
   }
 
   render() {
