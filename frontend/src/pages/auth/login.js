@@ -1,5 +1,6 @@
 import Swal from 'sweetalert2'
 import AuthenticationApi from '../../services/AuthenticationApi.js'
+import store from '../../store/store.js'
 
 class Login {
   constructor() {
@@ -44,7 +45,7 @@ class Login {
         customClass: { confirmButton: 'main-btn' }
       })
 
-      console.log(res.data.data)
+      store.auth.commit('setAuthUser', res.data.data)
 
       this.clearFieldsAfterSubmit([
         form.querySelector("[name = 'email']"),
