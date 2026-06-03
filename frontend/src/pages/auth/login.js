@@ -1,6 +1,7 @@
 import Swal from 'sweetalert2'
 import AuthenticationApi from '../../services/AuthenticationApi.js'
 import store from '../../store/store.js'
+import { navigateTo } from '../../utils/helpers.js'
 
 class Login {
   constructor() {
@@ -46,6 +47,7 @@ class Login {
       })
 
       store.auth.commit('setAuthUser', res.data.data)
+      navigateTo('/dashboard')
 
       this.clearFieldsAfterSubmit([
         form.querySelector("[name = 'email']"),

@@ -1,0 +1,77 @@
+<div 
+  class="container"
+  id="main-container"
+>
+  <div 
+    class="row kanban-board"
+    id="kanban-board"
+  >
+    <div class="col-12 mb-3">
+      <div class="d-flex align-items-center gap-2">
+        <button 
+          id="createbutton" 
+          class="createbutton btn main-btn"
+        >
+          Create Task
+        </button>
+    
+        <input 
+          type="text" 
+          id="taskInput" class="form-control" 
+          placeholder="Enter task name..." 
+        />
+      </div>
+    </div>
+
+    <div class="drag-container">
+      <ul class="drag-list">
+
+        <li class="drag-column">
+          <div class="col">
+            <div class="card todo">
+              <div class="card-header">
+                To Do
+              </div>
+            </div>
+            <ul 
+              id="inProgressList"
+              class="drag-item-list"  
+            >
+            </ul>
+          </div>
+        </li>
+        
+        <li class="drag-column">
+          <div class="col">
+            <div class="card inprogress">
+              <div class="card-header">
+                In Progress
+              </div>
+            </div>
+            <ul 
+              id="inProgressList"
+              class="drag-item-list"  
+            >
+            </ul>
+          </div>
+        </li>
+
+        <li class="drag-column">
+          <div class="col">
+            <div class="card done">
+              <div class="card-header">
+                Done
+              </div>
+            </div>
+            <ul 
+              id="doneList"
+              class="drag-item-list"  
+            >
+            </ul>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</div>

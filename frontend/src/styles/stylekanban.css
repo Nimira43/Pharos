@@ -152,22 +152,13 @@ input:focus {
   box-shadow: none !important; 
 }
 
-.todo {
-  background-color: rgba(0, 0, 0, 0.1);
-  color: var(--light);
-  font-size: 30px;
-}
-
-.inprogress {
-  background-color: rgba(0, 0, 255, 0.1);
-  color: var(--light);
-  font-size: 30px;
-}
-
+.todo,
+.inprogress,
 .done {
-  background-color: rgba(0, 128, 0, 0.1);
-  color: var(--light);
+  background-color: var(--grey-4);
+  color: var(--dark);
   font-size: 30px;
+  text-align: center;
 }
 
 .createbutton {

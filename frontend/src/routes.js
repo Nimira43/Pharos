@@ -8,6 +8,10 @@ const routes = {
   '/login': {
     path: '/pages/auth/login.html',
   },
+  '/dashboard': {
+    path: '/pages/dashboard/dashboard.html',
+    auth: true, 
+  }
 }
 
 export default routes
