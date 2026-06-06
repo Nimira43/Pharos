@@ -142,6 +142,7 @@ a {
 }
 
 input {
+  margin-top: 20px;
   border: 1px solid var(--grey-3) !important;
   border-radius: 3px !important;
   transition: var(--transition) !important;
@@ -152,6 +153,9 @@ input:focus {
   box-shadow: none !important; 
 }
 
+.card-header {
+  font-size: 1.2rem;
+}
 .todo,
 .inprogress,
 .done {

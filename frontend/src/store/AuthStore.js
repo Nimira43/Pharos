@@ -6,6 +6,10 @@ class AuthStore {
     }
   }
 
+  getState() {
+    return this.state
+  }
+
   commit(mutation, payload) {
     if (this.mutations[mutation]) {
       this.mutations[mutation](this.state, payload)
