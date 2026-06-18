@@ -1,7 +1,7 @@
 import Swal from 'sweetalert2'
 import AuthenticationApi from '../../services/AuthenticationApi.js'
 import store from '../../store/store.js'
-import { navigateTo } from '../../utils/helpers.js'
+import { navigateTo, eventEmitter } from '../../utils/helpers.js'
 
 class Login {
   constructor() {
@@ -46,14 +46,14 @@ class Login {
         customClass: { confirmButton: 'main-btn' }
       })
 
-      store.auth.commit('setAuthUser', res.data.data)
-      navigateTo('/dashboard')
-
       this.clearFieldsAfterSubmit([
         form.querySelector("[name = 'email']"),
         form.querySelector("[name = 'password']")
       ])
 
+      store.auth.commit('setAuthUser', res.data.data)
+      eventEmitter.emit('authStateChange, true')
+      navigateTo('/dashboard')
     } catch (error) {
       Swal.fire({
         icon: 'error',
