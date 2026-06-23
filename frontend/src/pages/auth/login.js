@@ -52,7 +52,7 @@ class Login {
       ])
 
       store.auth.commit('setAuthUser', res.data.data)
-      eventEmitter.emit('authStateChange, true')
+      eventEmitter.emit('authStateChange', true)
       navigateTo('/dashboard')
     } catch (error) {
       Swal.fire({
