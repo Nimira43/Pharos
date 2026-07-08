@@ -1,31 +1,258 @@
 <div 
-  class="container"
+  class="container" 
   id="main-container"
 >
-  <div 
-    class="row kanban-board"
-    id="kanban-board"
+  <button 
+    type="button" 
+    class="btn main createbutton" 
+    data-bs-toggle="modal" 
+    data-bs-target="#createTaskModal"
   >
-    <div class="col-12 mb-3">
-      <div class="d-flex align-items-center gap-2">
-        <button 
-          id="createbutton" 
-          class="createbutton btn main-btn"
+    Create Task
+  </button>
+  <div 
+    class="modal fade" 
+    id="createTaskModal" 
+    tabindex="-1" 
+    aria-labelledby="createModalLabel" 
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 
+            class="modal-title fs-5" 
+            id="createModalLabel"
+          >
+            Add Task
+          </h1>
+          <button 
+            type="button" 
+            class="btn-close" 
+            data-bs-dismiss="modal" 
+            aria-label="Close"
+          ></button>
+        </div>
+        <div 
+          class="modal-body" 
+          id="modalForm"
         >
-          Create Task
-        </button>
-    
-        <input 
-          type="text" 
-          id="taskInput" class="form-control" 
-          placeholder="Enter task name..." 
-        />
+          <form id="newTaskForm">
+            <div class="mb-3">
+              <label 
+                for="taskSummary" 
+                class="form-label"
+              >
+                Task Summary
+              </label>
+              <input 
+                type="text" 
+                class="form-control" 
+                id="taskSummary" 
+                name="taskSummary"
+                aria-describedby="emailHelp" 
+              />
+              <div 
+                id="taskSummaryHelp" 
+                class="form-text"
+              >
+                Required Field.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label 
+                for="acceptanceCriteria" 
+                class="form-label"
+              >
+                Acceptance Criteria
+              </label>
+              <textarea 
+                name="acceptanceCriteria" 
+                class="form-control" 
+                id="acceptanceCriteria"
+                name="acceptanceCriteria"
+              ></textarea>
+            </div>
+            <div class="mb-3">
+              <label 
+                for="status" 
+                class="form-label"
+              >
+                Select Status
+              </label>
+              <select 
+                class="form-select" 
+                aria-label="Default select example" 
+                id="selectTaskStatus" 
+                name="status"
+              >
+                <option selected value="">
+                  Open Select Menu
+                </option>
+                <option value="TO_DO">
+                  To Do
+                </option>
+                <option value="IN_PROGRESS">
+                  In Progress
+                </option>
+                <option value="DONE">
+                  Done
+                </option>
+              </select>
+            </div>
+            <div class="modal-footer">
+              <button 
+                type="button" 
+                class="btn main-btn" 
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button 
+                type="submit" 
+                class="btn main-btn" 
+                data-bs-dismiss="modal"
+              >
+                Create Task
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
-
+  </div>
+  <div 
+    class="modal fade" 
+    id="viewUpdateTaskModal" 
+    tabindex="-1" 
+    aria-labelledby="viewUpdateModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 
+            class="modal-title fs-5" 
+            id="viewUpdateModalLabel"
+          >
+            Update Task
+          </h1>
+          <button 
+            type="button" 
+            class="btn-close" 
+            data-bs-dismiss="modal" aria-label="Close"
+          ></button>
+        </div>
+        <div 
+          class="modal-body" 
+          id="viewUpdateModalForm"
+        >
+          <form id="updateForm">
+            <div class="mb-3">
+              <label 
+                for="_id" 
+                class="form-label"
+              >
+                Task ID:
+              </label>
+              <textarea 
+                type="text" 
+                class="form-control" 
+                id="_id" 
+                name="_id" 
+                aria-describedby="emailHelp"
+                disabled
+              ></textarea>
+            </div>
+            <div class="mb-3">
+              <label 
+                for="taskSummary" 
+                class="form-label"
+              >
+                Task Summary
+              </label>
+              <input 
+                type="text" 
+                class="form-control" 
+                id="taskSummary" 
+                name="taskSummary"
+                aria-describedby="emailHelp" 
+              />
+              <div 
+                id="taskSummaryHelp" 
+                class="form-text"
+              >
+                Required Field.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label 
+                for="acceptanceCriteria" class="form-label"
+              >
+                Acceptance Criteria
+              </label>
+              <textarea 
+                name="acceptanceCriteria" 
+                class="form-control" 
+                id="acceptanceCriteria"
+                name="acceptanceCriteria"
+              ></textarea>
+            </div>
+            <div class="mb-3">
+              <label 
+                for="status" 
+                class="form-label"
+              >
+                Select Status
+              </label>
+              <select 
+                class="form-select" 
+                aria-label="Default select example"
+                id="selectTaskStatus" 
+                name="status"
+              >
+                <option selected value="">
+                  Open Select Menu
+                </option>
+                <option value="TO_DO">
+                  To Do
+                </option>
+                <option value="IN_PROGRESS">
+                  In Progress
+                </option>
+                <option value="DONE">
+                  Done
+                </option>
+              </select>
+            </div>
+            <div class="modal-footer">
+              <button 
+                type="button" 
+                class="btn btn-secondary" 
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button 
+                type="submit" 
+                class="btn btn-primary" 
+                data-bs-dismiss="modal"
+              >
+                Update Task
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr />
+  <div 
+    class="row kanban-board" 
+    id="kanban-board"
+  >
     <div class="drag-container">
       <ul class="drag-list">
-
         <li class="drag-column">
           <div class="col">
             <div class="card todo">
@@ -34,13 +261,11 @@
               </div>
             </div>
             <ul 
-              id="toDoList"
-              class="drag-item-list"  
-            >
-            </ul>
+              id="todoList" 
+              class="drag-item-list"
+            ></ul>
           </div>
         </li>
-        
         <li class="drag-column">
           <div class="col">
             <div class="card inprogress">
@@ -49,13 +274,11 @@
               </div>
             </div>
             <ul 
-              id="inProgressList"
-              class="drag-item-list"  
-            >
-            </ul>
+              id="inProgressList" 
+              class="drag-item-list"
+            ></ul>
           </div>
         </li>
-
         <li class="drag-column">
           <div class="col">
             <div class="card done">
@@ -64,13 +287,11 @@
               </div>
             </div>
             <ul 
-              id="doneList"
-              class="drag-item-list"  
-            >
-            </ul>
+              id="doneList" 
+              class="drag-item-list"
+            ></ul>
           </div>
         </li>
-
       </ul>
     </div>
   </div>

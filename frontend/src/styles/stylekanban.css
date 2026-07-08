@@ -153,9 +153,14 @@ input:focus {
   box-shadow: none !important; 
 }
 
+select, textarea {
+  box-shadow: none !important;
+}
+
 .card-header {
   font-size: 1.2rem;
 }
+
 .todo,
 .inprogress,
 .done {
