@@ -1,10 +1,7 @@
-export const getAllTasks = async (req, res) => {
-  const tasks = []
+import * as TaskService from '..services/task-services.js'             
 
-  return res
-    .status(200)
-    .json({
-      message: 'Temporary controller confirmation',
-      data: tasks
-    })
+export const getAllTasks = async (req, res) => { 
+  return TaskServices.getAllTasks(req, res)
 }
+
+export const createTask = async (req, res) => {}
